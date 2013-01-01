@@ -82,8 +82,8 @@ class MainWindow():
         cr.set_line_width(bar_width)
         time = self.clock.get_time_millis() % period_millis
         bar_center_x = (sin(2 * pi * time / period_millis) + 1) * (width / 2)
-        cr.move_to(bar_center_x, 0)
-        cr.line_to(bar_center_x, height)
+        cr.move_to(round(bar_center_x), 0)
+        cr.line_to(round(bar_center_x), height)
         cr.stroke()
 
 if __name__ == "__main__":
